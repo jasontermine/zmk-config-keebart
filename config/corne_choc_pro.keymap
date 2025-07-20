@@ -42,48 +42,6 @@
 
             label = "SPOTLIGHT";
         };
-
-        ue: ue {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT>,
-                <&macro_tap>,
-                <&kp Y>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "UE";
-        };
-
-        oe: oe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT>,
-                <&macro_tap>,
-                <&kp P>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "OE";
-        };
-
-        ae: ae {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RIGHT_ALT>,
-                <&macro_tap>,
-                <&kp Q>,
-                <&macro_release>,
-                <&kp RALT>;
-
-            label = "AE";
-        };
     };
 
     keymap {
@@ -99,10 +57,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R        &kp T    &none  &none  &kp Z    &kp U          &kp I      &kp O    &kp P     &kp CAPSLOCK
-&kp LEFT_SHIFT    &kp A  &kp S  &kp D  &kp F        &kp G    &none  &none  &kp H    &kp J          &kp K      &kp L    &kp SEMI  &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &kp Y  &kp X  &kp C  &kp V        &kp B                  &kp N    &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
-                                &mo 3  &lt 2 SPACE  &kp TAB                &kp RET  &kp BACKSPACE  &mo 1
+&kp ESCAPE        &kp DE_Q  &kp DE_W  &kp DE_F  &kp DE_P     &kp DE_B  &none  &none  &kp DE_J  &kp DE_L       &kp DE_U      &kp DE_Y    &kp DE_SEMICOLON  &kp CAPSLOCK
+&kp LEFT_SHIFT    &kp DE_A  &kp DE_R  &kp DE_S  &kp DE_T     &kp DE_G  &none  &none  &kp DE_M  &kp DE_N       &kp DE_E      &kp DE_I    &kp DE_O          &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp DE_Z  &kp DE_X  &kp DE_C  &kp DE_D     &kp DE_V                &kp DE_K  &kp DE_H       &kp DE_COMMA  &kp DE_DOT  &kp DE_SLASH      &kp LGUI
+                                      &mo 3     &lt 2 SPACE  &kp TAB                 &kp RET   &kp BACKSPACE  &mo 1
             >;
         };
 
@@ -116,10 +74,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&trans  &kp CARET         &kp SINGLE_QUOTE       &kp DOUBLE_QUOTES  &kp GRAVE          &kp TILDE      &none  &none  &kp AT_SIGN   &kp PLUS         &kp ASTERISK   &kp EQUAL  &kp UNDERSCORE  &trans
-&trans  &kp LESS_THAN     &kp LEFT_PARENTHESIS   &kp LEFT_BRACE     &kp LEFT_BRACKET   &kp BACKSLASH  &none  &none  &kp QUESTION  &kp EXCLAMATION  &kp AMPERSAND  &kp PIPE   &kp MINUS       &trans
-&trans  &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp RIGHT_BRACKET  &kp SLASH                    &kp DOLLAR    &kp PERCENT      &kp COLON      &kp HASH   &kp SLASH       &trans
-                                                 &trans             &spotlight         &windowtab                   &trans        &trans           &trans
+&trans  &kp DE_CARET         &kp DE_SINGLE_QUOTE       &kp DE_DOUBLE_QUOTES  &kp DE_GRAVE          &kp DE_TILDE      &none  &none  &kp DE_AT        &kp DE_PLUS         &kp DE_ASTERISK   &kp DE_EQUAL  &kp DE_UNDERSCORE  &trans
+&trans  &kp DE_LESS_THAN     &kp DE_LEFT_PARENTHESIS   &kp DE_LEFT_BRACE     &kp DE_LEFT_BRACKET   &kp DE_BACKSLASH  &none  &none  &kp DE_QUESTION  &kp DE_EXCLAMATION  &kp DE_AMPERSAND  &kp DE_PIPE   &kp DE_MINUS       &trans
+&trans  &kp DE_GREATER_THAN  &kp DE_RIGHT_PARENTHESIS  &kp DE_RIGHT_BRACE    &kp DE_RIGHT_BRACKET  &kp DE_SLASH                    &kp DE_DOLLAR    &kp DE_PERCENT      &kp DE_COLON      &kp DE_HASH   &kp DE_SLASH       &trans
+                                                       &trans                &spotlight            &windowtab                      &trans           &trans              &trans
             >;
         };
 
@@ -133,20 +91,20 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &kp N0     &kp N7  &kp N8  &kp N9  &kp STAR  &kp KP_NUMLOCK
-&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH  &trans
-&trans  &none  &kp F1  &kp F2   &kp F3   &kp F3                 &kp UNDER  &kp N1  &kp N2  &kp N3  &kp DOT   &trans
-                       &trans   &trans   &trans                 &trans     &trans  &trans
+&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &kp DE_N0          &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_ASTERISK  &kp KP_NUMLOCK
+&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8   &none  &none  &kp DE_MINUS       &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_SLASH     &trans
+&trans  &none  &kp F1  &kp F2   &kp F3   &kp F3                 &kp DE_UNDERSCORE  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_DOT       &trans
+                       &trans   &trans   &trans                 &trans             &trans     &trans
             >;
         };
 
         NAV {
             display-name = "Navigation";
             bindings = <
-&kp ESC    &none  &none  &none   &none   &none    &none  &none  &none   &ue             &trans          &oe              &none  &trans
-&kp LSHFT  &ae    &none  &none   &none   &none    &none  &none  &none   &kp HOME        &kp UP_ARROW    &kp END          &none  &trans
-&kp LCTRL  &none  &none  &none   &none   &none                  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &trans
-                         &trans  &trans  &kp TAB                &trans  &kp DEL         &trans
+&kp ESC    &none            &none  &none   &none   &none    &none  &none  &none   &kp DE_U_UMLAUT  &trans          &kp DE_O_UMLAUT  &none  &trans
+&kp LSHFT  &kp DE_A_UMLAUT  &none  &none   &none   &none    &none  &none  &none   &kp HOME         &kp UP_ARROW    &kp END          &none  &trans
+&kp LCTRL  &none            &none  &none   &none   &none                  &none   &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &trans
+                                   &trans  &trans  &kp TAB                &trans  &kp DEL          &trans
             >;
         };
 
